@@ -1,0 +1,238 @@
+{% extends 'navbar.html' %} {% load static %} {% block title %}View Role {% endblock title %} {% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024">
+
+    <title>Dashboard | Employee Management System</title>
+    <link rel="stylesheet" href="{%static 'css/main.css'%}">
+    <link rel="stylesheet" href="{%static 'css/sidebar.css'%}">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+
+            <div>
+                <center>
+                    <img src="static/icons/fardeen_profile_pic.jpg" class="profile_img" height="50px" width="50px">
+                    <p style="color: rgb(196, 196, 196);">Welcome Fardeen</p>
+                </center>
+            </div>
+            <br>
+            <div style="display: flex; padding: 0px 2px;">
+                <img src="static/icons/dashboard_icon.png" class="img" height="22px" width="22px">
+                <h2><a href="/" class="a" style="color: rgb(196, 196, 196);">&nbsp; Dashboard</a></h2>
+            </div>
+            <br>
+            <h3 class="h3">INTERFACE</h3>
+            <br>
+
+            <li class="li">
+                <button class="dropdown-btn">
+                    <img src="static/icons/department_icon.png" class="img" height="18px" width="18px">
+                    Department
+                    <img src="static/icons/dropdown_icon.png" class="fa fa-caret-down" height="25px" width="25px">
+                </button>
+                <div class="dropdown-container">
+                    <ul class="dep_li">
+                        <li><button class="dropdown-btn"><a class="a" href="createdepartment">Create</a></button>
+                        </li>
+                        <li><button class="dropdown-btn"><a class="a" href="viewdepartment">View</a></button></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="li"><button class="dropdown-btn">
+                    <img src="static/icons/user_icon.png" height="25px" width="25px">
+                    User
+                    <img src="static/icons/dropdown_icon.png" class="fa fa-caret-down" height="25px" width="25px">
+                </button>
+                <div class="dropdown-container">
+                    <ul class="dep_li">
+                        <li><button class="dropdown-btn">
+                                Role
+                                <img src="static/icons/dropdown_icon.png" class="fa fa-caret-down" height="25px"
+                                    width="25px">
+                            </button>
+                            <div class="dropdown-container">
+                                <ul class="dep_li">
+                                    <li><button class="dropdown-btn"><a class="a" href="createrole">Create Role</a></button>
+                                    </li>
+                                    <li><button class="dropdown-btn"><a class="a" href="viewrole">View
+                                                Role</a></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <li><button class="dropdown-btn">
+                                User
+                                <img src="static/icons/dropdown_icon.png" class="fa fa-caret-down" height="25px"
+                                    width="25px">
+                            </button>
+                                <div class="dropdown-container">
+                                    <ul class="dep_li">
+                                        <li><button class="dropdown-btn"><a class="a" href="viewuser">View
+                                                User</a></button>
+                                        </li>
+                                        <li><button class="dropdown-btn"><a class="a" href="createuser">Create
+                                                User</a></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><button class="dropdown-btn">
+                                Permission
+                                <img src="static/icons/dropdown_icon.png" class="fa fa-caret-down" height="25px"
+                                    width="25px">
+                            </button>
+                                <div class="dropdown-container">
+                                    <ul class="dep_li">
+                                        <li><button class="dropdown-btn"><a class="a" style="font-size: 17px;"
+                                                href="viewpermission">View
+                                                Permission</a></button>
+                                        </li>
+                                        <li><button class="dropdown-btn"><a class="a" style="font-size: 16px;"
+                                                href="#">Create Permission</a></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                    </ul>
+                </div>
+                </li>
+            </li>
+            <li class="li"><button class="dropdown-btn">
+                    <img src="static/icons/staff_leave_icon.png" class="img" height="25px" width="25px">
+                    Staff Leave
+                    <img src="static/icons/dropdown_icon.png" class="fa fa-caret-down" height="25px" width="25px">
+                </button>
+                <div class="dropdown-container">
+                    <ul class="dep_li">
+                        <li><button class="dropdown-btn"><a class="a" href="approveleave">Approve
+                                    Leave</a></button></li>
+                        <li><button class="dropdown-btn"><a class="a" href="createleave">Create Leave</a></button>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="li"><button class="dropdown-btn">
+                    <img src="static/icons/staff_notice_icon.png" alt="" height="20px" width="20px">
+                    Staff Notice
+                    <img src="static/icons/dropdown_icon.png" class="fa fa-caret-down" height="25px" width="25px">
+                </button>
+                <div class="dropdown-container">
+                    <ul class="dep_li">
+                        <li><button class="dropdown-btn"><a class="a" href="viewnotice">View Notice</a></button>
+                        </li>
+                        <li><button class="dropdown-btn"><a class="a" href="createnotice">Create
+                                    Notice</a></button></li>
+
+                    </ul>
+                </div>
+            </li>
+            <li class="li">
+                <button class="dropdown-btn">
+                    <a href="mail" class="a">
+                        <img src="static/icons/mail_icon.png" class="img" height="15px" width="25px">
+                        Mail
+                    </a>
+                </button>
+            </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div>
+            <header>
+                <p id="heading">
+                    All Roles
+                </p>
+            </header>
+        </div>
+
+        <div class="container">
+            Show
+            <input id="show" type="number" placeholder="1"> entries
+            <div class="right">Search: <input id="search" type="search" aria-label="Search"></div>
+        </div>
+        <div class="container">
+            <table class="table-body">
+                <tr>
+                    <td>SN</td>
+                    <td>Name</td>
+                    <td>Description</td>
+                    <td>Edit</td>
+                    <td>Delete</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Admin</td>
+                    <td>Admin</td>
+                    <td><button class="role-btn"><img src="static/icons/edit_icon.png" class="edit_icon"></button></td>
+                    <td><button class="role-btn"><img src="static/icons/delete_icon.png" class="delete_icon"></button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Supervisor</td>
+                    <td>This is Supervisor</td>
+                    <td><button class="role-btn"><img src="static/icons/edit_icon.png" class="edit_icon"></button></td>
+                    <td><button class="role-btn"><img src="static/icons/delete_icon.png" class="delete_icon"></button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Staff</td>
+                    <td>Staff</td>
+                    <td><button class="role-btn"><img src="static/icons/edit_icon.png" class="edit_icon"></button></td>
+                    <td><button class="role-btn"><img src="static/icons/delete_icon.png" class="delete_icon"></button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="container">
+            <p>Showing 1 to 3 of 3 entries</p>
+            <div class="right">
+                <ul class="pagination">
+                    <li class="page-item"><button><a class="page-link" href="#">Previous</a></button></li>
+                    <li class="page-item"><button style="background-color: rgb(80, 80, 255);"><a class="page-link"
+                                style=" color: white;" href="#">1</a></button></li>
+                    <li class="page-item"><button><a class="page-link" href="#">Next</a></button></li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <div class="footer">
+                <p style="margin-left: 20px;">Copyright &copy; Your Website 2019</p>
+                <ul style="display: flex; margin-left: 54%;">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li>.</li>
+                    <li><a href="#">Terms & Conditions</a></li>
+            </div>
+        </footer>
+    </div>
+
+    </div>
+</body>
+<script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+</script>
+
+</html>
+{% endblock body %}

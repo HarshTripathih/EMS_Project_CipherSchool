@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1024">
+    <title>{% block title %}{% endblock title %} | Employee Management System</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static  'css/navbar.css'  %}">
+
+</head>
+
+<body>
+    <nav>
+        <div><img src="{% static 'icons/codingexpo-icon.png'%}" class="logo"></div>
+        <div class="right">More
+            <select class="icon" name="icon" id="">
+            <option value="switch">Login</option>
+            <option value="logout"><a href="#">logout</a></option>
+        </select></div>
+    </nav>
+    {% block body %}{% endblock body %}
+</body>
+
+</html>

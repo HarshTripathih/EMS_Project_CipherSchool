@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024">
+    <title>Login | Employee Management System</title>
+    <link rel="stylesheet" href="{%static 'css/main.css'%}">
+    <style>
+        .login-img {
+            height: 35%;
+            width: 50%;
+            margin-top: 18%;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(243, 239, 233);">
+    <center>
+        <h1>Employee Management System</h1>
+    </center>
+    <hr>
+    <br>
+    <div>
+        <marquee behavior="" direction="left">
+            <h4>Welcome to Coding Expo's Employee Management System</h4>
+        </marquee>
+    </div>
+    {% if messages %} {% for message in messages %}
+    <div class="alert success alert-{{message.tags}}" style="border-radius: 5px; background-color: rgb(255, 172, 172); border: 2px solid red; padding: 15px; margin-top: 8px; color: black;">
+        <strong>Invalid Username or Password</strong>
+        <span class="closebtn" style="cursor: pointer;margin-left: 80%;">&times;</span>
+    </div>
+    {% endfor %} {% endif %}
+    <div style="display: flex;">
+        <div><img src="static/icons/codingexpo-icon.png" class="login-img"></div>
+        <div class="login" style="background-color: gainsboro; margin-right: 150px; margin-top: 80px; width: 40%;">
+            <header style="border-bottom: 2px solid black; margin-top: 0px;">
+                <center>
+                    <h3 style="font-size: 25px;">Login</h3>
+                </center>
+            </header>
+            <div style="padding: 30px;">
+                <form method="POST" action="/">
+                    {% csrf_token %}
+                    <label for="email" style="font-size: 25px;">Username</label>
+                    <br><br>
+                    <input type="text" name="username" id="username" style="width: 95%; height: 30px;" placeholder="Enter Username" required>
+                    <br><br>
+                    <label for="password" style="font-size: 25px;">Password</label><br><br>
+                    <input type="password" name="password" id="password" style="width: 95%; height: 30px;" placeholder="Enter Password" required>
+                    <br><br>
+                    <a href="#">forgot password</a><br><br>
+                    <input type="submit" value="Login" class="btn">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.opacity = "0";
+            setTimeout(function() {
+                div.style.display = "none";
+            }, 600);
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,87 @@
+ * {
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+            top: 50px;
+            left: 0;
+            overflow-x: hidden;
+        }
+        
+        .wrapper .sidebar {
+            position: fixed;
+            width: 210px;
+            height: 100%;
+            padding: 30px 10px;
+            background-color: rgb(19 19 27);
+        }
+        
+        ul {
+            list-style: none;
+            color: rgb(133, 133, 133);
+        }
+        
+        .a {
+            text-decoration: none;
+            color: slategrey;
+        }
+        
+        .li {
+            padding: 10px 10px;
+            font-size: 18px;
+            display: block;
+            text-decoration: none;
+            color: #818181;
+            font-size: 20px;
+            display: block;
+        }
+        
+        .h5 {
+            font-size: 16px;
+            color: rgb(147, 147, 147);
+        }
+        
+        .li :hover {
+            color: bisque;
+        }
+        
+        .h3 {
+            font-size: 16px;
+            color: rgb(147, 147, 147);
+        }
+        
+        .dropdown-container {
+            display: none;
+            padding-left: 8px;
+        }
+        
+        .fa-caret-down {
+            float: right;
+            padding-right: 5px;
+        }
+        
+        .dropdown-btn {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        .dep_li {
+            list-style: none;
+            padding: 6px 8px 6px 16px;
+        }
+        
+        .img {
+            filter: invert();
+        }
+        
+        .profile_img {
+            border-radius: 35px;
+        }

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1024">
+    <title>SideBar</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/sidebar.css'%}">
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <div class="wrapper">
+        <div class="sidebar">
+
+            <div>
+                <center>
+                    <img src="{% static 'icons/fardeen_profile_pic.jpg'%}" class="profile_img" height="50px" width="50px">
+                    <p style="color: rgb(196, 196, 196);">Welcome Fardeen</p>
+                </center>
+            </div>
+            <br>
+            <div style="display: flex; padding: 0px 2px;">
+                <img src="{%  static 'icons/dashboard_icon.png'%}" class="img" height="22px" width="22px">
+                <h2><a href="{% url '#'%}" class="a" style="color: rgb(196, 196, 196);">&nbsp; Dashboard</a></h2>
+            </div>
+            <br>
+            <h3 class="h3">INTERFACE</h3>
+            <br>
+
+            <li class="li">
+                <button class="dropdown-btn">
+                    <img src="{%  static 'icons/department_icon.png'%}" class="img" height="18px" width="18px">
+                    Department
+                    <img src="{%  static 'icons/dropdown_icon.png'%}" class="fa fa-caret-down" height="25px" width="25px">
+                </button>
+                <div class="dropdown-container">
+                    <ul class="dep_li">
+                        <li><button class="dropdown-btn"><a class="a" href="{% url 'webpage4'%}">Create</a></button>
+                        </li>
+                        <li><button class="dropdown-btn"><a class="a" href="{% url 'webpage16'%}">View</a></button></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="li"><button class="dropdown-btn">
+                    <img src="{%  static 'icons/user_icon.png'%}" height="25px" width="25px">
+                    User
+                   <img src="{%  static 'icons/dropdown_icon.png'%}" class="fa fa-caret-down" height="25px" width="25px">
+                </button>
+                <div class="dropdown-container">
+                    <ul class="dep_li">
+                        <li><button class="dropdown-btn">
+                                Role
+                            <img src="{%  static 'icons/dropdown_icon.png'%}" class="fa fa-caret-down" height="25px" width="25px">
+                            </button>
+                            <div class="dropdown-container">
+                                <ul class="dep_li">
+                                    <li><button class="dropdown-btn"><a class="a" href="{% url 'createrole' %}">Create Role</a></button>
+                                    </li>
+                                    <li><button class="dropdown-btn"><a class="a" href="{% url 'webpage14'%}">View Role</a></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <li><button class="dropdown-btn">
+                                User
+                                <img src="{%  static 'icons/dropdown_icon.png'%}" class="fa fa-caret-down" height="25px" width="25px">
+                            </button>
+                                <div class="dropdown-container">
+                                    <ul class="dep_li">
+                                        <li><button class="dropdown-btn"><a class="a" href="{% url 'webpage15'%}">View User</a></button>
+                                        </li>
+                                        <li><button class="dropdown-btn"><a class="a" href="{% url 'webpage3'%}">Create User</a></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><button class="dropdown-btn">
+                                Permission
+                                <img src="{%  static 'icons/dropdown_icon.png'%}" class="fa fa-caret-down" height="25px" width="25px">
+                            </button>
+                                <div class="dropdown-container">
+                                    <ul class="dep_li">
+                                        <li><button class="dropdown-btn"><a class="a" style="font-size: 17px;" href="{% url 'webpage13'%}">View
+                                                Permission</a></button>
+                                        </li>
+                                        <li><button class="dropdown-btn"><a class="a" style="font-size: 16px;"
+                                                href="#">Create Permission</a></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                    </ul>
+                </div>
+                </li>
+            </li>
+            <li class="li"><button class="dropdown-btn">
+                    <img src="{%  static 'icons/staff_leave_icon.png'%}" class="img" height="25px" width="25px">
+                    Staff Leave
+                    <img src="{%  static 'icons/dropdown_icon.png'%}" class="fa fa-caret-down" height="25px" width="25px">
+                </button>
+                <div class="dropdown-container">
+                    <ul class="dep_li">
+                        <li><button class="dropdown-btn"><a class="a"href="{% url 'webpage8'%}">Approve Leave</a></button></li>
+                        <li><button class="dropdown-btn"><a class="a"href="{% url 'webpage2'%}">Create Leave</a></button></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="li"><button class="dropdown-btn">
+                    <img src="{%  static 'icons/staff_notice_icon.png'%}" alt="" height="20px" width="20px">
+                    Staff Notice
+                    <img src="{%  static 'icons/dropdown_icon.png'%}" class="fa fa-caret-down" height="25px" width="25px">
+                </button>
+                <div class="dropdown-container">
+                    <ul class="dep_li">
+                        <li><button class="dropdown-btn"><a class="a" href="{% url 'webpage17'%}">View Notice</a></button></li>
+                        <li><button class="dropdown-btn"><a class="a" href="{% url 'webpage5'%}">Create Notice</a></button></li>
+
+                    </ul>
+                </div>
+            </li>
+            <li class="li">
+                <button class="dropdown-btn">
+                    <a href="{% url 'webpage9'%}" class="a">
+                    <img src="{% static 'icons/mail_icon.png'%}" class="img" height="15px" width="25px">
+                    Mail
+                    </a>
+                </button>
+            </li>
+
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+</script>
+
+</html>

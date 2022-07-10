@@ -1,0 +1,208 @@
+{% extends 'navbar.html' %} {% load static %} {% block title %}Mail {% endblock title %} {% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024">
+
+    <title>Dashboard | Employee Management System</title>
+    <script>
+        function ddlselect() {
+            var d = document.getElementsById("ddselect");
+            var displaytext = d.options[d.selectedIndex].text;
+            document.getElementById("txtvalue").value = displaytext;
+        }
+    </script>
+    <link rel="stylesheet" href="{%static 'css/main.css'%}">
+    <link rel="stylesheet" href="{%static 'css/sidebar.css'%}">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+
+            <div>
+                <center>
+                    <img src="static/icons/fardeen_profile_pic.jpg" class="profile_img" height="50px" width="50px">
+                    <p style="color: rgb(196, 196, 196);">Welcome Fardeen</p>
+                </center>
+            </div>
+            <br>
+            <div style="display: flex; padding: 0px 2px;">
+                <img src="static/icons/dashboard_icon.png" class="img" height="22px" width="22px">
+                <h2><a href="/" class="a" style="color: rgb(196, 196, 196);">&nbsp; Dashboard</a></h2>
+            </div>
+            <br>
+            <h3 class="h3">INTERFACE</h3>
+            <br>
+
+            <li class="li">
+                <button class="dropdown-btn">
+                    <img src="static/icons/department_icon.png" class="img" height="18px" width="18px">
+                    Department
+                    <img src="static/icons/dropdown_icon.png" class="fa fa-caret-down" height="25px" width="25px">
+                </button>
+                <div class="dropdown-container">
+                    <ul class="dep_li">
+                        <li><button class="dropdown-btn"><a class="a" href="createdepartment">Create</a></button>
+                        </li>
+                        <li><button class="dropdown-btn"><a class="a" href="viewdepartment">View</a></button></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="li"><button class="dropdown-btn">
+                    <img src="static/icons/user_icon.png" height="25px" width="25px">
+                    User
+                    <img src="static/icons/dropdown_icon.png" class="fa fa-caret-down" height="25px" width="25px">
+                </button>
+                <div class="dropdown-container">
+                    <ul class="dep_li">
+                        <li><button class="dropdown-btn">
+                                Role
+                                <img src="static/icons/dropdown_icon.png" class="fa fa-caret-down" height="25px"
+                                    width="25px">
+                            </button>
+                            <div class="dropdown-container">
+                                <ul class="dep_li">
+                                    <li><button class="dropdown-btn"><a class="a" href="createrole">Create Role</a></button>
+                                    </li>
+                                    <li><button class="dropdown-btn"><a class="a" href="viewrole">View
+                                                Role</a></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <li><button class="dropdown-btn">
+                                User
+                                <img src="static/icons/dropdown_icon.png" class="fa fa-caret-down" height="25px"
+                                    width="25px">
+                            </button>
+                                <div class="dropdown-container">
+                                    <ul class="dep_li">
+                                        <li><button class="dropdown-btn"><a class="a" href="viewuser">View
+                                                User</a></button>
+                                        </li>
+                                        <li><button class="dropdown-btn"><a class="a" href="createuser">Create
+                                                User</a></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><button class="dropdown-btn">
+                                Permission
+                                <img src="static/icons/dropdown_icon.png" class="fa fa-caret-down" height="25px"
+                                    width="25px">
+                            </button>
+                                <div class="dropdown-container">
+                                    <ul class="dep_li">
+                                        <li><button class="dropdown-btn"><a class="a" style="font-size: 17px;"
+                                                href="viewpermission">View
+                                                Permission</a></button>
+                                        </li>
+                                        <li><button class="dropdown-btn"><a class="a" style="font-size: 16px;"
+                                                href="#">Create Permission</a></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                    </ul>
+                </div>
+                </li>
+            </li>
+            <li class="li"><button class="dropdown-btn">
+                    <img src="static/icons/staff_leave_icon.png" class="img" height="25px" width="25px">
+                    Staff Leave
+                    <img src="static/icons/dropdown_icon.png" class="fa fa-caret-down" height="25px" width="25px">
+                </button>
+                <div class="dropdown-container">
+                    <ul class="dep_li">
+                        <li><button class="dropdown-btn"><a class="a" href="approveleave">Approve
+                                    Leave</a></button></li>
+                        <li><button class="dropdown-btn"><a class="a" href="createleave">Create Leave</a></button>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="li"><button class="dropdown-btn">
+                    <img src="static/icons/staff_notice_icon.png" alt="" height="20px" width="20px">
+                    Staff Notice
+                    <img src="static/icons/dropdown_icon.png" class="fa fa-caret-down" height="25px" width="25px">
+                </button>
+                <div class="dropdown-container">
+                    <ul class="dep_li">
+                        <li><button class="dropdown-btn"><a class="a" href="viewnotice">View Notice</a></button>
+                        </li>
+                        <li><button class="dropdown-btn"><a class="a" href="createnotice">Create
+                                    Notice</a></button></li>
+
+                    </ul>
+                </div>
+            </li>
+            <li class="li">
+                <button class="dropdown-btn">
+                    <a href="mail" class="a">
+                        <img src="static/icons/mail_icon.png" class="img" height="15px" width="25px">
+                        Mail
+                    </a>
+                </button>
+            </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div>
+            <header>
+                <p id="heading">
+                    Mail
+                </p>
+            </header>
+        </div>
+        <div class="regis" style="margin-left: 70px; width: 80%;">
+            <form>
+                <header style="border-bottom: 1px solid black; padding: 10px; background-color: gainsboro;">Send Email</header>
+                <div style="padding: 10px;">
+                    <label for="created-by">Select:</label><br>
+                    <select name="" id="ddselect" onchange="ddlselect();" style="font-size: 15px; width: 90%; height: 30px;" required>
+                        <option value="" selected>--select--</option>
+                        <option class="option1" value="">To All</option>
+                        <option class="option2" value="">To Department</option>
+                        <option class="option3" value="">To Individual</option>
+                    </select><br><br>
+                    <input type="text" id="txtvalue" />
+                    <input type="text" style="width: 90%;height:5vh" required spellcheck="true" name="" id=""><br><br>
+                    <label for="desc">Body:</label><br>
+
+
+                    <input type="text" style="width: 90%; height: 200px;" required spellcheck="true" name="" id=""><br><br>
+                    <label for="name">File:</label><br>
+                    <input type="file" style="width: 90%; height: 30px;"><br><br>
+                    <input type="submit" class="btn" value="Send">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+</script>
+
+</html>
+{% endblock body %}
